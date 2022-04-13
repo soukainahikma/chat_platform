@@ -19,7 +19,7 @@
 .chatCard .chatContent{
     margin-top: 20px;
     width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 200px);
     background-color: white;
     display : flex;
     flex-direction: column;
