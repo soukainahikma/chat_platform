@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AllFriends from './all/AllFriends';
 import classes from './Home.module.css'
 import OnlineList from './online/OnlineList';
 
@@ -22,12 +23,8 @@ function Home() {
             <button onClick={showComponent}> Pending</button>
             <button onClick={showComponent}> Blocked</button>
         </div>
-        {buttons === 1 ?
-            <OnlineList />
-            : null}
-        {buttons === 2 ?
-            <div>All</div>
-            : null}
+        {buttons === 1 ?<OnlineList /> : null}
+        {buttons === 2 ? <AllFriends/> : null}
         {buttons === 3 ? <div>Pending</div> : null}
         {buttons === 4 ? <div>Blocked</div> : null}
 

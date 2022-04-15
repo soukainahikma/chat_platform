@@ -1,4 +1,4 @@
-.onlineCard{
+.allCard{
     
     display: flex;
     flex-direction: row;
@@ -7,25 +7,26 @@
     align-items: center;
     border-top: 1px solid gray;
 }
-.onlineCard img{
+.allCard img{
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 50%;
     width: 40px;
     height: 40px;
 }
-.onlineCard:hover{
+.allCard:hover{
     background-color:white;
     border-radius: 10px;
 }
-.onlineCard .buttons {
+.allCard .buttons {
     display:flex;
     flex-direction: row;
     width :100%;
     justify-content: flex-end;
 
 }
-.onlineCard .buttons button{
+
+.allCard .buttons button{
     border:none;
     background-color: #5c63b3;
     color :white;
@@ -35,6 +36,6 @@
     height: 30px;
     cursor: pointer;
 }
-.onlineCard .buttons button:active{
+.allCard .buttons button:active{
 background-color: #7075a8;
 }
