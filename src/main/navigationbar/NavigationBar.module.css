@@ -11,7 +11,7 @@
 .nav .barContent{
     display: flex;
     flex-direction: column;
-
+    margin-top:50px;
 }
 
 .nav .barContent button{
@@ -21,12 +21,18 @@
 	font-size: 16px;
 	color: white;
 	cursor: pointer;
-    justify-content: center;
     align-items: center;
 	background-color: transparent;
+    text-align: left;
+    opacity: 70%;
 }
 .nav .barContent button:hover{
     background-color: #9d8de4;
+    opacity: 100%;
+}
+.nav .barContent button i{
+    margin-left: 20px;
+    margin-right: 10px;
 }
 .link{
 	text-align: left;

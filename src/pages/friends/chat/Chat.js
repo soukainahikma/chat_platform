@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import classes from './Chat.module.css'
+import ChatHeader from './ChatHeader';
 import MessageCard from './MessageCard';
-function Chat() {
+function Chat(props) {
     const [messagelist, setMessageList] = useState([]);
     const [CurentMessage, setCurentMessage] = useState("");
     function Message() {
@@ -11,7 +12,7 @@ function Chat() {
         setCurentMessage("")
     }
     return <div className={classes.chatCard}>
-        <div className={classes.chatHeader} ></div>
+        <ChatHeader toggle={props.toggle}/>
         <div className={classes.chatContent} >
             <div className={classes.chatMessages}>
                 {messagelist.map((message) => (
