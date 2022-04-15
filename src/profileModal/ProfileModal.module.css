@@ -15,4 +15,22 @@
     width: 80%;
     height: 50%;
     background-color: #31275d;;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.card .close{
+     display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+.card .close i{
+    color:white;
+    opacity: 50%;
+    font-size:30px;
+    cursor: pointer;
+    
+}
+ .card .close i:hover{
+    opacity: 100%;
 }

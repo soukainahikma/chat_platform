@@ -15,7 +15,7 @@ function App() {
   return (
     <div  className={classes.App}>
       <MainApp OpenClose={OpenCloseModal}/>
-      {backdrop? <ProfileModal/>: null}
+      {backdrop? <ProfileModal OpenClose={OpenCloseModal}/>: null}
     </div>
   );
 }
