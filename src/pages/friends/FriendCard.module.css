@@ -10,6 +10,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .friendButton .profileImg{
     border-radius: 50%;
@@ -25,8 +26,6 @@
 }
 
 .friendButton:hover{
-    align-items: center;
-    width:100%;
-    height: 60px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 55px;
+    box-shadow: rgba(138, 138, 138, 0.25) 0px 54px 55px, rgba(88, 88, 88, 0.12) 0px -12px 30px, rgba(212, 212, 212, 0.12) 0px 4px 6px, rgba(117, 117, 117, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }

@@ -8,8 +8,11 @@ function Chat(props) {
     const [messagelist, setMessageList] = useState([]);
     const [CurentMessage, setCurentMessage] = useState("");
     function Message() {
-        setMessageList((list) => [...list, CurentMessage])
-        setCurentMessage("")
+        if(CurentMessage !== "")
+        {
+            setMessageList((list) => [...list, CurentMessage])
+            setCurentMessage("")
+        }
     }
     return <div className={classes.chatCard}>
         <ChatHeader toggle={props.toggle}/>

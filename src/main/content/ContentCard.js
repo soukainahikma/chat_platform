@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router';
 import Channels from '../../pages/channels/Channels';
 import Friends from '../../pages/friends/Friends';
 import Home from '../../pages/home/Home';
+import NewChannel from '../../pages/newChannel/NewChannel';
 import classes from './ContentCard.module.css'
 
 function ContentCard(props) {
@@ -16,6 +17,9 @@ function ContentCard(props) {
                 </Route>
                 <Route path='/channels'>
                     <Channels />
+                </Route>
+                <Route path='/NewChannel'>
+                    <NewChannel />
                 </Route>
             </Switch>
         </div>
