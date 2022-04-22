@@ -18,7 +18,7 @@ function ContentCard(props) {
                 <Route path='/channels'>
                     <Channels />
                 </Route>
-                <Route path='/NewChannel'>
+                <Route path='/new_channel'>
                     <NewChannel />
                 </Route>
             </Switch>
