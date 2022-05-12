@@ -5,7 +5,7 @@ import Home from '../../pages/home/Home';
 import NewChannel from '../../pages/newChannel/NewChannel';
 import classes from './ContentCard.module.css'
 
-function ContentCard(props) {
+function ContentCard() {
     return (<div className={classes.content} >
         <div className={classes.card}>
             <Switch>
@@ -13,7 +13,7 @@ function ContentCard(props) {
                     <Home />
                 </Route>
                 <Route path='/chat'>
-                    <Friends toggle={props.toggle}/>
+                    <Friends/>
                 </Route>
                 <Route path='/channels'>
                     <Channels />

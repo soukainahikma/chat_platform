@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 60%;
     height: 45%;
+    max-width: 500px;
     background-color: white;
     padding : 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -21,9 +22,6 @@
 
 }
 
-/* .card .createForm select{
-    height: 9%;
-} */
 .card .createForm button{
     border : 5px;
     margin-top: 10%;

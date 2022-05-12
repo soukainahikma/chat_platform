@@ -1,13 +1,15 @@
 import Chat from './chat/Chat';
 import FriendCard from './FriendCard';
 import classes from './Friends.module.css'
-function Friends( props) {
+
+
+function Friends( ) {
     return <div className={classes.mainCard}>
         <div className={classes.friendList}>
             <input type="text" /* value="" */ placeholder="  Search..."/>
            <FriendCard/>
         </div>
-        <Chat toggle={props.toggle}/>
+        <Chat />
     </div>
 }
 

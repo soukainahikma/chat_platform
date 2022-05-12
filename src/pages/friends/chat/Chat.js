@@ -1,10 +1,18 @@
 
 
 import { useState } from 'react';
+import ProfileModal from '../../../profileModal/ProfileModal';
 import classes from './Chat.module.css'
 import ChatHeader from './ChatHeader';
 import MessageCard from './MessageCard';
-function Chat(props) {
+function Chat() {
+    const [backdrop, setBackdrop] = useState(false);
+  function OpenCloseModal() {
+    if (backdrop == false)
+      setBackdrop(true);
+    else
+      setBackdrop(false);
+  }
     const [messagelist, setMessageList] = useState([]);
     const [CurentMessage, setCurentMessage] = useState("");
     function Message() {
@@ -15,7 +23,7 @@ function Chat(props) {
         }
     }
     return <div className={classes.chatCard}>
-        <ChatHeader toggle={props.toggle}/>
+        <ChatHeader toggle={OpenCloseModal}/> 
         <div className={classes.chatContent} >
             <div className={classes.chatMessages}>
                 {messagelist.map((message) => (
@@ -31,6 +39,7 @@ function Chat(props) {
                     };
                 }} />
                 <button onClick={Message}>&#9658;</button></div>
+                {backdrop ? <ProfileModal OpenClose={OpenCloseModal} /> : null} {/* Needs the user's data */}
         </div>
     </div>
 }
