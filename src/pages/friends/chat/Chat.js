@@ -2,13 +2,11 @@
 
 import { useContext, useState } from 'react';
 import ProfileModal from '../../../profileModal/ProfileModal';
-import { DataContexProvider } from '../data_context/data-context';
 import classes from './Chat.module.css'
 import ChatHeader from './ChatHeader';
 import MessageCard from './MessageCard';
-function Chat() {
-    const dataContextVar = useContext(DataContexProvider);
-
+function Chat(props) {
+    // const dataContextVar = useContext(DataContex);
     const [backdrop, setBackdrop] = useState(false);
   function OpenCloseModal() {
     if (backdrop == false)
@@ -26,7 +24,7 @@ function Chat() {
         }
     }
     return <div className={classes.chatCard}>
-        <ChatHeader toggle={OpenCloseModal}/> 
+        <ChatHeader user={props.user} toggle={OpenCloseModal}/> 
         <div className={classes.chatContent} >
             <div className={classes.chatMessages}>
                 {messagelist.map((message) => (

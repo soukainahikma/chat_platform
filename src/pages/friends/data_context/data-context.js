@@ -2,9 +2,9 @@ import { createContext, useState } from "react";
 
 const DataContex = createContext({
     data: [],
-    selectedConversationId: 0,
+    selectedConversation: {},
     addUser: (user) => { },
-    setConversationId: (val) => { }
+    setConversation: (val) => { }
 });
 
 export function DataContexProvider(props) {
@@ -12,20 +12,21 @@ export function DataContexProvider(props) {
     { conversationId: 1, userId: 5, name: "soukaina" },
     { conversationId: 2, userId: 9, name: "salma" }
     ]);
-    const [convId,setConvId] = useState(0)
+    const [selectedConv,setSelectedConv] = useState(userData[0])
     function addUserHandler(userData) {
         SetUserData((previousData) => {
             return (previousData.concat(userData));
         })
     }
-    function setConversationId(convId) {
-        setConvId(convId);
+    function setConversation(convId) {
+        console.log(userData.find(user => user.conversationId === convId));
+        setSelectedConv(userData.find(user => user.conversationId === convId));
     }
     const context = {
         data: userData,
         addUser: addUserHandler,
-        selectedConversationId: convId,
-        setConversationId: setConversationId
+        selectedConversation: selectedConv,
+        setConversation: setConversation
     }
     return (
         <DataContex.Provider value={context}>

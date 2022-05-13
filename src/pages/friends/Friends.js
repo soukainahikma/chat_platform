@@ -6,12 +6,13 @@ import classes from './Friends.module.css'
 
 function Friends( ) {
     const dataContextVar = useContext(DataContex);
+    console.log(dataContextVar)
     return <div className={classes.mainCard}>
         <div className={classes.friendList}>
             <input type="text" /* value="" */ placeholder="  Search..."/>
            {dataContextVar.data.map((user)=><FriendCard key={user.userId} user={user}/>) }
         </div>
-        <Chat />
+        <Chat user={dataContextVar.selectedConversation} />
     </div>
 }
 
