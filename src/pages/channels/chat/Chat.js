@@ -14,8 +14,9 @@ function Chat(props) {
             setCurentMessage("")
         }
     }
+    
     return <div className={classes.chatCard}>
-        <ChatHeader toggle={props.toggle}/>
+        <ChatHeader toggle={props.toggle} channel={props.channel}/>
         <div className={classes.chatContent} >
             <div className={classes.chatMessages}>
                 {messagelist.map((message) => (

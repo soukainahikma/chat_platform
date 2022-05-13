@@ -4,7 +4,6 @@ import classes from './FriendCard.module.css'
 function FriendCard(props) {
     const dataContextVar = useContext(DataContex);
     function setConversation_(){
-        // console.log(dataContextVar)
         dataContextVar.setConversation(props.user.conversationId);
     }
     return (

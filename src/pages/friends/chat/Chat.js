@@ -1,15 +1,14 @@
 
 
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import ProfileModal from '../../../profileModal/ProfileModal';
 import classes from './Chat.module.css'
 import ChatHeader from './ChatHeader';
 import MessageCard from './MessageCard';
 function Chat(props) {
-    // const dataContextVar = useContext(DataContex);
     const [backdrop, setBackdrop] = useState(false);
   function OpenCloseModal() {
-    if (backdrop == false)
+    if (backdrop === false)
       setBackdrop(true);
     else
       setBackdrop(false);
@@ -28,6 +27,7 @@ function Chat(props) {
         <div className={classes.chatContent} >
             <div className={classes.chatMessages}>
                 {messagelist.map((message) => (
+                    
                     <MessageCard message={message} />
                 ))}
             </div>

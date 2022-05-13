@@ -1,5 +1,6 @@
 import { Route, Switch } from 'react-router';
 import Channels from '../../pages/channels/Channels';
+import { DataChannelProvider } from '../../pages/channels/data_context/data-context';
 import { DataContexProvider } from '../../pages/friends/data_context/data-context';
 import Friends from '../../pages/friends/Friends';
 import Home from '../../pages/home/Home';
@@ -19,7 +20,9 @@ function ContentCard() {
                     </DataContexProvider>
                 </Route>
                 <Route path='/channels'>
-                    <Channels />
+                    <DataChannelProvider>
+                        <Channels />
+                    </DataChannelProvider>
                 </Route>
                 <Route path='/new_channel'>
                     <NewChannel />
