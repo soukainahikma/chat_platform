@@ -4,7 +4,6 @@ import { DataChannelProvider } from '../../pages/channels/data_context/data-cont
 import { DataContexProvider } from '../../pages/friends/data_context/data-context';
 import Friends from '../../pages/friends/Friends';
 import Home from '../../pages/home/Home';
-import NewChannel from '../../pages/newChannel/NewChannel';
 import classes from './ContentCard.module.css'
 
 function ContentCard() {
@@ -23,9 +22,6 @@ function ContentCard() {
                     <DataChannelProvider>
                         <Channels />
                     </DataChannelProvider>
-                </Route>
-                <Route path='/new_channel'>
-                    <NewChannel />
                 </Route>
             </Switch>
         </div>

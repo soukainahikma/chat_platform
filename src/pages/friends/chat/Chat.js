@@ -7,27 +7,26 @@ import ChatHeader from './ChatHeader';
 import MessageCard from './MessageCard';
 function Chat(props) {
     const [backdrop, setBackdrop] = useState(false);
-  function OpenCloseModal() {
-    if (backdrop === false)
-      setBackdrop(true);
-    else
-      setBackdrop(false);
-  }
+    function OpenCloseModal() {
+        if (backdrop === false)
+            setBackdrop(true);
+        else
+            setBackdrop(false);
+    }
     const [messagelist, setMessageList] = useState([]);
     const [CurentMessage, setCurentMessage] = useState("");
     function Message() {
-        if(CurentMessage !== "")
-        {
+        if (CurentMessage !== "") {
             setMessageList((list) => [...list, CurentMessage])
             setCurentMessage("")
         }
     }
     return <div className={classes.chatCard}>
-        <ChatHeader user={props.user} toggle={OpenCloseModal}/> 
+        <ChatHeader user={props.user} toggle={OpenCloseModal} />
         <div className={classes.chatContent} >
             <div className={classes.chatMessages}>
                 {messagelist.map((message) => (
-                    
+
                     <MessageCard message={message} />
                 ))}
             </div>
@@ -40,7 +39,7 @@ function Chat(props) {
                     };
                 }} />
                 <button onClick={Message}>&#9658;</button></div>
-                {backdrop ? <ProfileModal OpenClose={OpenCloseModal} /> : null} {/* Needs the user's data */}
+            {backdrop ? <ProfileModal OpenClose={OpenCloseModal} /> : null} {/* Needs the user's data */}
         </div>
     </div>
 }
