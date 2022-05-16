@@ -8,12 +8,20 @@
     margin-top: 100px;
 }
 
-.whiteCard p {
+.whiteCard .title {
     color: #495577;
     padding: 50px;
     padding-bottom: 20px;
     letter-spacing: 0px;
     font-size: 30px;
+}
+
+.whiteCard .errorMessage {
+    color: #893125;
+    padding: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 0px;
+    font-size: 15px;
 }
 
 .whiteCard input {
@@ -30,7 +38,7 @@
     outline: 0;
 }
 
-.whiteCard button {
+.whiteCard .button {
     background-color: #495577;
     border-radius: 5px;
     border: none;

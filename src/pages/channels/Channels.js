@@ -25,7 +25,7 @@ function Channels(props) {
             
         </div>
         <Chat toggle={props.toggle} channel={dataChannelVar.selectedConversation} />
-        {backdrop ? <NewChannel OpenClose={OpenCloseModal} /> : null}
+        {backdrop ? <NewChannel OpenClose={OpenCloseModal}  /> : null}
     </div>
 }
 

@@ -1,20 +1,29 @@
 import classes from './App.module.css'
 import MainApp from './main/MainApp';
 import Auth from './Auth'
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
 function App() {
+  const history = useHistory();
+  useEffect(() => {
+    if (document.cookie)
+      history.replace('/')
+    else 
+      history.replace('/auth')
+  },);
+
   return (
     <div className={classes.App}>
-      {/* <MainApp /> */}
-      {/* <Auth /> */}
       <Switch>
-        <Route exact path="/auth">
+        <Route path="/auth">
           <Auth />
         </Route>
-        <Route exact path="/app">
+        <Route path="/">
           <MainApp />
         </Route>
       </Switch>
+      {/* <MainApp /> */}
+      {/* <Auth /> */}
     </div>
   );
 }

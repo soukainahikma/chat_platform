@@ -1,20 +1,29 @@
 import './Auth.css';
 import Login from './Containers/Login';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route, Redirect, useHistory} from 'react-router-dom';
 import Register from './Containers/Register';
+import { useEffect } from 'react';
 
 const Auth = () => {
+
+  const history = useHistory();
+  useEffect(() => {
+    if (document.cookie)
+      history.replace('/')
+  },);
+
+
   return (
     <div className="Auth">
       <Switch>
-        <Route exact path="/register">
+        <Route path="/auth/register">
           <Register />
         </Route>
-        <Route exact path="/login">
+        <Route path="/auth/login">
           <Login />
         </Route>
       </Switch>
-      <Redirect from='/' to='/register' />
+      <Redirect from='/' to='/auth/login' />
     </div>
     
   );

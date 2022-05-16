@@ -22,7 +22,7 @@ function NewChannel(props) {
     }
     return (
         <div>
-            <div className={classes.backdrop}></div>
+            <div onClick={props.OpenClose} className={classes.backdrop}></div>
             <div className={classes.card}>
                 <form className={classes.createForm} onSubmit={SubmitHandler} >
                     <div className={classes.text}>Create new channel</div>
