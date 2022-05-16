@@ -11,7 +11,7 @@ function NewChannel(props) {
         event.preventDefault();
         const enteredName =nameInputRef.current.value;
         const enteredDescription =descriptionInputRef.current.value;
-        const enteredStatus =statusInputRef.current;
+        const enteredStatus =statusInputRef;
 
         const data={
             name: enteredName,
@@ -37,14 +37,14 @@ function NewChannel(props) {
                     </div>
                     <div className={classes.info}>
                         <label > Status </label>
-                        <div>
-                            <div className={classes.status}><input type="radio" name="status" onChange={() => setChoice(false)} ref={statusInputRef} />
+                        <div ref={statusInputRef} >
+                            <div className={classes.status}><input type="radio" name="status" onChange={() => setChoice(false)} /* ref={statusInputRef} */ />
                                 <label>public</label>
                             </div>
-                            <div className={classes.status}><input type="radio" name="status" onChange={() => setChoice(false)} ref={statusInputRef} />
+                            <div className={classes.status}><input type="radio" name="status" onChange={() => setChoice(false)} /* ref={statusInputRef} */ />
                                 <label>private</label>
                             </div>
-                            <div className={classes.status}><input type="radio" name="status" onChange={() => setChoice(true)} ref={statusInputRef} />
+                            <div className={classes.status}><input type="radio" name="status" onChange={() => setChoice(true)} /* ref={statusInputRef} */ />
                                 <label>protected</label>
                             </div>
                         </div>

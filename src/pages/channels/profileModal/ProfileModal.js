@@ -8,7 +8,6 @@ function ProfileModal(props) {
       <div className={classes.backdrop}></div>
       <div className={classes.card}>
         <div onClick={props.OpenClose} className={classes.close}> <i className="fa-solid fa-xmark"></i></div>
-      <input />
       </div>
     </div>)
 }
