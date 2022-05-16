@@ -33,6 +33,7 @@ const WhiteCardLogin = (props) => {
     //   .catch(err => {
     //     console.log(err)
     //   })
+
     await axios.post(`http://localhost:5000/auth/login`, data)
     .then(res => {
       if (res.data.hasOwnProperty("access_token")) {
