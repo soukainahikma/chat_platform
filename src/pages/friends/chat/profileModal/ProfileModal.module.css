@@ -15,7 +15,7 @@
     width: 80%;
     max-width: 800px;
     height: 50%;
-    background-color: #31275d;;
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
     padding: 10px;

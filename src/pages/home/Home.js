@@ -5,23 +5,13 @@ import OnlineList from './online/OnlineList';
 
 function Home() {
     const [buttons, setButton] = useState(1);
-    function showComponent(event) {
-        if (event.target.outerText === 'Online')
-            setButton(1);
-        if (event.target.outerText === 'All')
-            setButton(2);
-        if (event.target.outerText === 'Pending')
-            setButton(3);
-        if (event.target.outerText === 'Blocked')
-            setButton(4);
-    }
     return <div className={classes.home}>
         <input type="text" /* value="" */ placeholder="  Search..." />
         <div className={classes.navBar}>
-            <button onClick={showComponent}> Online</button>
-            <button onClick={showComponent}> All</button>
-            <button onClick={showComponent}> Pending</button>
-            <button onClick={showComponent}> Blocked</button>
+            <button onClick={()=>setButton(1)}> Online</button>
+            <button onClick={()=>setButton(2)}> All</button>
+            <button onClick={()=>setButton(3)}> Pending</button>
+            <button onClick={()=>setButton(4)}> Blocked</button>
         </div>
         {buttons === 1 ?<OnlineList /> : null}
         {buttons === 2 ? <AllFriends/> : null}
