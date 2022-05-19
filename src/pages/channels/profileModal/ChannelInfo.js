@@ -2,6 +2,7 @@ import { useState } from 'react';
 import About from './About';
 import Admins from './Admins';
 import classes from './ChannelInfo.module.css'
+import Members from './Members';
 function ChannelInfo() {
     const [buttons, setButton] = useState(1);
     return (
@@ -19,7 +20,7 @@ function ChannelInfo() {
             </div>
             {buttons === 1 ? <About/> : null}
             {buttons === 2 ? <div><Admins/></div> : null}
-            {buttons === 3 ? <div>Members</div> : null}
+            {buttons === 3 ? <div><Members/></div> : null}
         </div>
     )
 }

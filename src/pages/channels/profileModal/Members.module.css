@@ -1,4 +1,4 @@
-.Admins{
+.Members{
     display: flex;
     flex-direction: column;
     max-height: 310px;
@@ -12,7 +12,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.AdminsCard{
+.MembersCard{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -22,7 +22,7 @@
     background-color:darkgrey;
     font-family: "Gill Sans", sans-serif;
 }
-.AdminImage{
+.MemberImage{
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 50%;

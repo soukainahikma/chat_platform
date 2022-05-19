@@ -5,17 +5,20 @@
    flex-direction: column;
    margin-top: 30px;;
 }
-#profileCard{
-    display: none;
-}
+
 .card{
+    position:absolute;
     display: flex;
     flex-direction: column;
-    background-color: #8670e9;
-    margin-bottom:15px;
-    width:80%;
+    align-items: center;
+    background-color: white;
+    margin-top:300px;
+    margin-left: 200px;
+    width:200px;
     height: 200px;
-    border-radius: 15px;
+    z-index: 10;
+    opacity: 90%;
+    border-radius: 5px;
 }
 .setCard img{
     border-radius: 50%;
@@ -47,6 +50,7 @@
     justify-content: center;
     align-items: center;
     background-color: #ad9cf8;
+    color:white;
     transform: rotate(180deg);
 }
 .closeArrow{
@@ -59,5 +63,5 @@
     justify-content: center;
     align-items: center;
     background-color:  #876df8;
-    /* transform: rotate(-180deg); */
+    color:white;
 }

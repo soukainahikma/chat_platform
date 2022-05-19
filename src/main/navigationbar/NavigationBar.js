@@ -5,7 +5,7 @@ import ProfileCard from './ProfileCard';
 function NavigationBar() {
     return <nav className={classes.nav}>
         <div>
-            <ProfileCard/>
+            <ProfileCard />
             <div className={classes.barContent}>
                 <Link className={classes.link} to="/"><button><i className="fa-solid fa-house"></i>Home</button></Link>
                 <Link className={classes.link} to="/chat"><button><i className="fa-brands fa-rocketchat"></i>Chat </button></Link>
@@ -15,6 +15,7 @@ function NavigationBar() {
                 <Link className={classes.link} to="/settings"><button><i className="fa-solid fa-gear"></i>Settings</button></Link>
             </div>
         </div>
+        <div className={classes.logout}><button>logout</button></div>
     </nav>
 }
 export default NavigationBar;

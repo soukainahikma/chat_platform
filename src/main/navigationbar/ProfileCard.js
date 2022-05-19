@@ -5,14 +5,9 @@ function ProfileCard() {
     const [isActive,setActive]= useState(false)
     function showCard(){
         if(isActive === false)
-        {
             setActive(true);
-            document.getElementById(classes.profileCard).style.display = "flex";
-        }
-        else{
+        else
             setActive(false)
-            document.getElementById(classes.profileCard).style.display = "none";
-        }
     }
     return <div className={classes.setCard}>
         <img alt="" src="https://i.pinimg.com/474x/ec/e2/b0/ece2b0f541d47e4078aef33ffd22777e.jpg"></img>
@@ -21,8 +16,9 @@ function ProfileCard() {
         <span className={isActive?  classes.closeArrow:classes.openArrow}><i className="fa-solid fa-chevron-down" ></i></span>
         </button>
        
-            <div className={classes.card} id={classes.profileCard}>        
-            </div>
+            { isActive? <div className={classes.card}>
+                <div>info</div>
+            </div> : null}
         
     </div>;
 }
