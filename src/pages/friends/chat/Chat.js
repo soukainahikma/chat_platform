@@ -1,5 +1,3 @@
-
-
 import { useState } from 'react';
 import ProfileModal from './profileModal/ProfileModal';
 import classes from './Chat.module.css'

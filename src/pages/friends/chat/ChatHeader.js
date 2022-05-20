@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import classes from './ChatHeader.module.css'
 
-
-
 function GameInvitation(props) {
     return <div>
         <div className={classes.backdrop}></div>
@@ -18,12 +16,19 @@ function GameInvitation(props) {
     </div>
 }
 function ChatHeader(props) {
-    const [backdrop, setBackdrop] = useState(false);
-    function OpenCloseModal() {
-        if (backdrop === false)
-            setBackdrop(true);
+    const [backdrop1, setBackdrop1] = useState(false);
+    const [backdrop2, setBackdrop2] = useState(false);
+    function OpenCloseModal1() {
+        if (backdrop1 === false)
+            setBackdrop1(true);
         else
-            setBackdrop(false);
+            setBackdrop1(false);
+    }
+    function OpenCloseModal2() {
+        if (backdrop2 === false)
+            setBackdrop2(true);
+        else
+            setBackdrop2(false);
     }
     return (<div className={classes.chatWrapper}>
         <button className={classes.chatHeader} onClick={props.toggle} >
@@ -33,8 +38,16 @@ function ChatHeader(props) {
                 <div>Online </div>
             </div>
         </button>
-        <button onClick={OpenCloseModal} className={classes.buttonInvitation}>Game Invitation</button>
-        {backdrop ? <GameInvitation OpenClose={OpenCloseModal} /> : null}
+        <button onClick={OpenCloseModal1} className={classes.buttonSetting}><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        {backdrop1 ?                                                                                                                                                                                                                                                          
+        <div className={classes.userHandler}>
+             <button onClick={()=>{OpenCloseModal2(); OpenCloseModal1()}} className={classes.buttonInvitation}>Game Invitation</button>
+             <button  onClick={OpenCloseModal1} className={classes.buttonUnfriend}>Unfriend</button>
+             <button  onClick={OpenCloseModal1} className={classes.buttonBlock}>Block</button>
+        </div>:null
+    }
+    {backdrop2 ? <GameInvitation OpenClose={OpenCloseModal2}  /> : null}
+        
     </div>)
 }
 export default ChatHeader
